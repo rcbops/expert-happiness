@@ -18,40 +18,32 @@
 
 $(document).ready(function () {
   'use strict';
-  //var info_site = "http://127.0.0.1:8080";
-  var info_site = "http://162.242.211.248:8000";
-  fetchjsonMap(info_site);
+  var info_site = "CHANGEME";
 
-  function setInfobarHeight() {
-    /*var control_bar_height = $(".help-info-control-bar").height();
-    var main_content_height = $("#main_content").height();
-    var side_bar_height = $("#sidebar").height();
-    var max = Math.max(main_content_height, side_bar_height);
-    var help_content_height = Math.max(main_content_height, side_bar_height) - control_bar_height;
-    $('.help-info-content').height(help_content_height);
-    console.log("control " + control_bar_height);
-    console.log("max " + max);
-    console.log("help " + help_content_height);*/
-  }
+  fetchjsonMap(info_site);
 
   function helpInfoContainer() {
     var opened = false;
+    var helpInfoControlBarBgColor = "#eee";
+    var helpInfoControlBarFontColor = "#000";
+    var helpInfoContainerBgColor = "#fff";
+    var helpInfoContainerBorder = "1px solid rgba(0, 0, 0, 0.14)";
     var $help = $('<div></div>')
       .addClass('help-info-container')
-      .css('border', "1px solid rgba(0, 0, 0, 0.14)")
+      .css('border', helpInfoContainerBorder)
       .css('position', 'absolute')
       .css('bottom', '10px')
       .css('right', '10px')
-      .css('background-color', '#fff')
+      .css('background-color', helpInfoContainerBgColor)
       .css('width', '300px')
       .css("display", "block");
 
     var $control = $('<div>Help</div>')
       .addClass('help-info-control-bar')
-      .css('background-color', 'rgb(59, 115, 185)')
+      .css('background-color', helpInfoControlBarBgColor)
       .css('font-weight', 'bold')
       .css('padding', '5px 5px 5px 15px')
-      .css('color', '#ffffff')
+      .css('color', helpInfoControlBarFontColor)
       .css('cursor', 'pointer');
 
     var $icon = $('<span></span>')
@@ -103,7 +95,6 @@ $(document).ready(function () {
   }
 
   function fetchjsonMap(site) {
-    console.log("Fetching the jsons");
     $.ajax({
       url: site.concat("/index.json"),
       type: "GET",
@@ -141,7 +132,6 @@ $(document).ready(function () {
   }
 
   function fetchHelpPage(page) {
-    console.log("fetching the help page;");
     $.ajax({
       url: page,
       type: "GET",
