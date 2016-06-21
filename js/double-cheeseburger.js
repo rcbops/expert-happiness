@@ -36,6 +36,7 @@ $(document).ready(function () {
       .css('right', '10px')
       .css('background-color', helpInfoContainerBgColor)
       .css('width', '300px')
+      .css('z-index', '3')
       .css("display", "block");
 
     var $control = $('<div>Help</div>')
