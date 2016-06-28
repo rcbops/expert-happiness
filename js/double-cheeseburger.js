@@ -64,7 +64,10 @@ $(document).ready(function () {
     $content.appendTo($help);
 
     function open() {
-      var topBarHeight = $('.topbar').height(); 
+      var topBarHeight = $('.navbar').height();
+      if (topBarHeight === 0) {
+        topBarHeight = 40;
+      }
       $help.css('top', "" + (topBarHeight + 10) + "px");
       $icon
         .addClass('glyphicon-minus')
