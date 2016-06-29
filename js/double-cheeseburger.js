@@ -50,7 +50,7 @@ $(document).ready(function () {
     var $icon = $('<span></span>')
       .addClass('glyphicon')
       .addClass('glyphicon-plus')
-      .css('font-size', '20px')
+      .css('font-size', '17px')
       .css('float', 'right');
     $icon.appendTo($control);
 
