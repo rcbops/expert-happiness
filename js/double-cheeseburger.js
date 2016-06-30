@@ -31,7 +31,7 @@ $(document).ready(function () {
     var $help = $('<div></div>')
       .addClass('help-info-container')
       .css('border', helpInfoContainerBorder)
-      .css('position', 'absolute')
+      .css('position', 'fixed')
       .css('bottom', '10px')
       .css('right', '10px')
       .css('background-color', helpInfoContainerBgColor)
