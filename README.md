@@ -108,7 +108,7 @@ Next edit your `user_variables.yml` file and add the following:
 
     horizon_custom_uploads:
       cheeseburger:
-        src: /opt/expert-happiness/double-cheeseburger.js
+        src: /opt/expert-happiness/js/double-cheeseburger.js
         dest: js/double-cheeseburger.js
 
 Finally save the file and re-run the os_horizon playbook
