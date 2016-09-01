@@ -114,4 +114,4 @@ Next edit your `user_variables.yml` file and add the following:
 Finally save the file and re-run the os_horizon playbook
 
     cd /opt/openstack-ansible/playbooks
-    openstack-ansible os_horizon
+    openstack-ansible os-horizon-install.yml
